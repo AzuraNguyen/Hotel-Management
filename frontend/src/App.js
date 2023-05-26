@@ -1,22 +1,27 @@
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
+
+
 import './App.css';
+import Room from './pages/room/Room';
+import Renting from './pages/renting/Renting';
+import Login from './pages/login/Login';
+import Payment from './pages/payment/Payment';
+import Customer from './pages/customer/Customer';
+import Report from './pages/report/Report';
+import NotFound from './pages/notFound/NotFound';
+import Navbar from './components/Navbar';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Navbar/>
+      <Room/>
+      <Renting/>
+      <Payment/>
+      <Customer/>
+      <Report/>
+    </BrowserRouter>
   );
 }
 
