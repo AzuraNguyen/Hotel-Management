@@ -51,7 +51,6 @@ class KhachHang(models.Model):
     class Meta:
         constraints = [
             CheckConstraint(check=Q(hoTen__length__gt=0), name = "KH_hoTen_minlength"),
-            CheckConstraint(check=Q(sdt__length__gt=10), name = "KH_sdt_minlength"),
             CheckConstraint(check=Q(cccd__length__gt=0), name = "KH_cccd_minlength"),
             CheckConstraint(check=Q(quocTich__length__gt=0), name = "KH_quocTich_minlength"),
         ]
@@ -98,7 +97,6 @@ class Phong(models.Model):
         constraints = [
             CheckConstraint(check = Q(trangThai__range=(0,1)), name = 'PHONG_check_trang_thai')
         ]
-# Check id phong unique
 
 
 # =========================================================
