@@ -1,0 +1,611 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%;
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    width: 1400px;
+    height: 600px;
+    background-color: gray;
+    margin: auto;
+    display:  flex;
+}
+.sidebar{
+    width: 20%;
+    height: 100%;
+    background-color: RGB(51,50,103);
+    display: flex;
+    flex-direction: column;
+}
+.content{
+    width: 80%;
+    height: 100%;
+    background-color: RGB(240,239,245);
+    display: flex;
+}
+.avata{
+
+    width: 100%;
+    height: 22%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.datphong{
+    width: 100%;
+    height: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container_dp_img{
+    width: 15%;
+    height:50%;
+}
+.container_dp_text{
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.container_dp_img img{
+    width: 100%;
+    height: 100%;
+}
+.dp_text{
+    color: RGB(106,158,131);
+    font-size: 1.35rem;
+}
+.thongke{
+    width: 100%;
+    height: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container_tk_img{
+    width: 15%;
+    height:50%;
+}
+.container_tk_text{
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.container_tk_img img{
+    width: 100%;
+    height: 100%;
+}
+.tk_text{
+    color: RGB(106,158,131);
+    font-size: 1.35rem;
+}
+.sodophong{
+    width: 100%;
+    height: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container_sdp_img{
+    width: 15%;
+    height:50%;
+}
+.container_sdp_text{
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.container_sdp_img img{
+    width: 100%;
+    height: 100%;
+}
+.sdp_text{
+    color: RGB(106,158,131);
+    font-size: 1.35rem;
+}
+.thanhtoan{
+    width: 100%;
+    height: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container_tt_img{
+    width: 15%;
+    height:50%;
+}
+.container_tt_text{
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.container_tt_img img{
+    width: 100%;
+    height: 100%;
+}
+.tt_text{
+    color: RGB(106,158,131);
+    font-size: 1.35rem;
+}
+.quanlykhach{
+    width: 100%;
+    height: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container_qlk_img{
+    width: 15%;
+    height:50%;
+}
+.container_qlk_text{
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.container_qlk_img img{
+    width: 100%;
+    height: 100%;
+}
+.qlk_text{
+    color: RGB(106,158,131);
+    font-size: 1.35rem;
+}
+.capnhat{
+    width: 100%;
+    height: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container_cn_img{
+    width: 15%;
+    height:50%;
+}
+.container_cn_text{
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.container_cn_img img{
+    width: 100%;
+    height: 100%;
+}
+.cn_text{
+    color: RGB(106,158,131);
+    font-size: 1.35rem;
+}
+.text{
+    background-color: seagreen;
+    width: 100%;
+    height: 30%;
+}
+.container_avata{
+    width: 90%;
+    height: 32%;
+    background-color: khaki;
+}
+.container_avata img{
+    width: 100%;
+    height: 100%;
+
+}
+.container_text{
+    width: 100%;
+    height: 100%;
+    background-color: khaki;
+}
+.container_text img{
+    width: 100%;
+    height: 100%;
+
+}
+.form_nhap{
+    width: 75%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+}
+.search{
+    width: 95%;
+    height: 5%;
+    border-radius: 0.75rem;
+    background: white;
+    display: flex;
+    
+}
+.icon_search{
+    width: 5%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+}
+.icon_search i{
+    font-size: 2re;
+    color: RGB(109,107,209);
+    margin: auto;
+}
+.text_search{
+    width: 95%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+}
+.text_search input{
+    color: RGB(149,162,172);
+    font-size: 2rem;
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+.form_themkhach{
+    width: 95%;
+    height:45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.title_themkhach{
+    width: 95%;
+    height: 10%;
+
+    display: flex;
+}
+.icon_themkhach{
+    width: 5%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+}
+.icon_themkhach i{
+    font-size: 2rem;
+    color: black;
+}
+.text_themkhach{
+    width: 95%;
+    height: 100%;
+
+    color: black;
+    font-size: 1.75rem;
+    font-weight: 900;
+    outline: 1.75rem;
+}
+.container_themkhach{
+    width: 95%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.left_themkhach{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.nhap_cccd{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.title_cccd{
+    width: 50%;
+    height: 30%;
+    font-size: 1.5rem;
+}
+.nhap_cccd input{
+    width: 100%;
+    height: 40%;
+    border: none;
+    outline: none;
+    border-radius: 1rem;
+}
+.nhap_hoten{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.title_hoten{
+    width: 50%;
+    height: 30%;
+    font-size: 1.5rem;
+}
+.nhap_hoten input{
+    width: 100%;
+    height: 40%;
+    border: none;
+    outline: none;
+    border-radius: 1rem;
+}
+.nhap_sodt{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.title_sodt{
+    width: 50%;
+    height: 30%;
+    font-size: 1.5rem;
+}
+.nhap_sodt input{
+    width: 100%;
+    height: 40%;
+    border: none;
+    outline: none;
+    border-radius: 1rem;
+}
+.nhap_diachi{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.title_diachi{
+    width: 50%;
+    height: 30%;
+    font-size: 1.5rem;
+}
+.nhap_diachi input{
+    width: 100%;
+    height: 40%;
+    border: none;
+    outline: none;
+    border-radius: 1rem;
+}
+.right_themkhach{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.nhap_email{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.title_email{
+    width: 50%;
+    height: 30%;
+    font-size: 1.5rem;
+}
+.nhap_email input{
+    width: 100%;
+    height: 40%;
+    border: none;
+    outline: none;
+    border-radius: 1rem;
+}.nhap_gioitinh{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.title_gioitinh{
+    width: 50%;
+    height: 30%;
+    font-size: 1.5rem;
+}
+.nhap_gioitinh input{
+    width: 100%;
+    height: 40%;
+    border: none;
+    outline: none;
+    border-radius: 1rem;
+}.nhap_quoctich{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.title_quoctich{
+    width: 50%;
+    height: 30%;
+    font-size: 1.5rem;
+}
+.nhap_quoctich input{
+    width: 100%;
+    height: 40%;
+    border: none;
+    outline: none;
+    border-radius: 1rem;
+}.nhap_loaikhach{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.title_loaikhach{
+    width: 50%;
+    height: 30%;
+    font-size: 1.5rem;
+}
+.nhap_loaikhach input{
+    width: 100%;
+    height: 40%;
+    border: none;
+    outline: none;
+    border-radius: 1rem;
+}
+.danhsach{
+    width: 95%;
+    height:40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.title_danhsach{
+    width: 95%;
+    height: 10%;
+    display: flex;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.text_danhsach{
+    width: 95%;
+    height: 100%;
+
+    color: black;
+    font-size: 1.75rem;
+    font-weight: 900;
+    outline: 1.75rem;
+}
+.box_danhsach{
+
+    width: 95%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    background-color: white;
+    border-radius: 10%;
+
+}
+.themkhach_bt{
+    width: 30%;
+    height:10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10%;
+    background-color: RGB(51,50,105);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.icon_bt{
+    width: 20%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon_bt i{
+    font-size: 2rem;
+    color: white;
+}
+.text_bt
+{
+    width: 80%;
+    height: 100%;
+    color: white;
+    font-size: 1.75rem;
+    font-weight: 600;
+    outline: 1.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.avata_user{
+    width: 25%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items:  center;
+    padding-top: 1rem;
+}
+.container_user{
+    width: 94%;
+    height: 20%;
+    background-color: white;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items:  center;
+    justify-content: center;
+}
+.avt{
+    width: 40%;
+    height: 50%;
+    border-radius: 50%;
+    background-color: blueviolet;
+}
+.name{
+    width: 40%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+
+}
+.em{
+    width: 80%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+}
+.name_mini{
+    width: 85%;
+    height: 50%;
+    font-size: 1rem;
+    font-weight: 900;
+}
+.icon{
+    width: 15%;
+    height: 50%;
+    font-size: 1rem;
+}
+.icon i{
+    margin: auto;
+}
+.ema{
+    color: RGB(149,155,165);
+    font-size: 1rem;
+}
+.avt img{
+    width: 100%;
+    height: 100%;
+}
