@@ -11,10 +11,17 @@ import Report from './pages/report/Report';
 import NotFound from './pages/notFound/NotFound';
 import Navbar from './components/Navbar';
 
-
 function App() {
   return (
-    <NotFound/>
+    <div>
+      <Navbar/>
+      <Room/>
+      <Renting/>
+      <Payment/>
+      <Customer/>
+      <Report/>
+      <NotFound/>
+    </div>
   );
 }
 

@@ -5,9 +5,11 @@ import './navbar.css'
 
 const Navbar = () => {
   return (
-    <div>
-      aa
-    </div>
+    <nav>
+      <div className="container nav_container">
+        
+      </div>
+    </nav>
   )
 }
 

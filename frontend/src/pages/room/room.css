@@ -1,0 +1,314 @@
+
+
+body{
+    background: #F0EFF5;
+}
+
+.search_room{
+    position: absolute;
+    width: 698px;
+    height: 165px;
+    left: 327px;
+    top: 733px;
+}
+
+#sd{
+    position: absolute;
+    width: 217px;
+    height: 46px;
+    left: 345px;
+    top: 139px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 140%;
+    /* or 42px */
+    text-align: center;
+
+
+    color: #242730;
+}
+
+/* Các tác vụ */
+.component{
+    position: absolute;
+    width: 298px;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+
+    background: #333269;
+}
+/* Thanh tìm kiếm */
+.search_bar{
+    position: absolute;
+    width: 780px;
+    height: 70px;
+    left: 330px;
+    top: 30px;
+    background: #FFFFFF;
+    border-radius: 20px;
+}
+
+/* Tài khoản người dùng */
+.user{
+    position: absolute;
+    width: 290px;
+    height: 220px;
+    left: 1521px;
+    top: 29px;
+
+    background: #FFFFFF;
+    border-radius: 20px;
+}
+
+.room_inf{
+    position: absolute;
+    width: 402px;
+    height: 708px;
+    left: 1086px;
+    top: 188px;
+
+
+    background: red;
+}
+
+/* Tra cứu phòng */
+#tc{
+    position: absolute;
+    width: 249px;
+    height: 40px;
+    left: 27px;
+    top: 0px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 140%;
+    /* or 42px */
+
+    text-align: center;
+
+    color: #242730;
+}
+#tcp{
+    position: absolute;
+    width: 221px;
+    height: 38px;
+    left: 255px;
+    top: 1px;
+
+    background: #FFFFFF;
+    border-radius: 20px;
+
+    position: absolute;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 140%;
+    /* or 25px */
+    text-align: center;
+
+    color: #8695A0;
+}
+#search_bt{
+    position: absolute;
+    width: 38px;
+    height: 38px;
+    left: 485px;
+    top: 1px;
+
+    background: #333269;
+    border-radius: 10px;
+}
+#search_img{
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    margin-left: 4px;
+    margin-top: 3px;
+
+    background: url(Search.png);
+}
+#room{
+    position: absolute;
+    width: 604px;
+    height: 490px;
+    left: 411px;
+    top: 188px;
+
+    background: #FFFFFF;
+    border-radius: 20px;
+}
+.box_room{
+    position: absolute;
+    width: 120px;
+    height: 120px;
+
+    border-radius: 20px;
+}
+.empty{
+    background: #333269;
+}
+.full{
+    background: #D9D9D9;
+}
+.text_box{
+
+    width: 75px;
+    height: 80px;
+    left: 22px;
+    top: 32px;
+
+}
+#text{
+    position: absolute;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 140%;
+    /* or 25px */
+    margin: 0 auto;
+    text-align: center;
+
+
+    color: black;
+}
+
+
+/* thông số các phòng */
+#r_101{
+    left: 27px;
+    top: 32px;
+}
+#r_102{
+    left: 240px;
+    top: 32px;
+}
+#r_103{
+    left: 453px;
+    top: 32px;
+}
+#r_201{
+    left: 27px;
+    top: 184px;
+}
+#r_202{
+    left: 240px;
+    top: 184px;
+}
+#r_203{
+    left: 453px;
+    top: 184px;
+}
+#r_301{
+    left: 27px;
+    top: 338px;
+}
+#r_302{
+    left: 240px;
+    top: 338px;
+}
+#r_303{
+    left: 453px;
+    top: 338px;
+}
+
+/* dấu tích */
+#ok{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+
+    background: url(Ok.png);
+}
+#x{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+
+    background: url(Cancel.png);
+}
+#room_table{
+    position: absolute;
+    width: 698px;
+    height: 108px;
+    left: 0px;
+    top: 58px;
+
+    background: #FFFFFF;
+    border-radius: 20px;
+}
+.table_tag{
+    position: absolute;
+    width: 119px;
+    height: 30px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 140%;
+    /* or 28px */
+
+    text-align: center;
+
+    color: black;
+}
+#mp{
+    left: 18px;
+    top: 20px;
+    color: #C5697F;
+}
+#lp{
+    left: 199px;
+    top: 20px;
+    color: #C5697F;
+}
+#dg{
+    left: 378px;
+    top: 20px;
+    color: #C5697F;
+}
+#tt{
+    left: 557px;
+    top: 20px;
+    color: #C5697F;
+}
+.room_box{
+    position: relative;
+    width: 700px;
+    height: 36px;
+    left: 31px;
+    top: 57px;
+}
+
+.mp_value{
+    position: absolute;
+    width: 92px;
+    height: 31px;
+    left: 28px;
+}
+.lp_value{
+    position: absolute;
+    width: 92px;
+    height: 31px;
+    left: 221px;
+}
+.dg_value{
+    position: absolute;
+    width: 92px;
+    height: 31px;
+    left: 369px;
+}
+.tt_value{
+    position: absolute;
+    width: 92px;
+    height: 31px;
+    left: 557px;
+}
