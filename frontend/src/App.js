@@ -1,4 +1,5 @@
-import {BrowserRouter, Routes, Route} from 'react-router-dom'
+
+//import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
 
 import './App.css';
@@ -11,17 +12,17 @@ import Report from './pages/report/Report';
 import NotFound from './pages/notFound/NotFound';
 import Navbar from './components/Navbar';
 
-
 function App() {
   return (
-    <BrowserRouter>
+    <div>
       <Navbar/>
       <Room/>
       <Renting/>
       <Payment/>
       <Customer/>
       <Report/>
-    </BrowserRouter>
+      <NotFound/>
+    </div>
   );
 }
 
