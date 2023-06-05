@@ -4,7 +4,7 @@ from rest_framework.routers import DefaultRouter
 
 
 router = DefaultRouter()
-router.register("customers",KhachHangViewset)
+router.register("customer",KhachHangViewset)
 
 
 

@@ -47,7 +47,7 @@ class KhachHang(models.Model):
 
     def __str__(self):
         return self.hoTen
-    
+
     class Meta:
         constraints = [
             CheckConstraint(check=Q(hoTen__length__gt=0), name = "KH_hoTen_minlength"),
