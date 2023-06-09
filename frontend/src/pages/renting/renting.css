@@ -1,0 +1,124 @@
+body
+{
+    background: #F0EFF5;
+}
+
+.Menu-frame
+{
+    position: absolute;
+    width: 298px;
+    bottom:0px;
+    left: 0px;
+    top: 0px;
+    background-color:#333269;
+}
+.Avatar-frame
+{
+    position: absolute;
+    width: 290px;
+    height: 220px;
+    left: 1200px;
+    top: 30px;
+    background: #FFFFFF;
+    border-radius: 20px;
+}
+/*button*/
+.btn{
+    font-family: "Poppins";
+    font-size: 18px;
+    font-weight: 500;
+    background: #333269;
+    width: 180px;
+    height: 70px;
+    padding: 20px;
+    border:0px #FFFFFF;
+    box-sizing: border-box;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
+    position: absolute;
+    left:585px;
+    top:590;
+}
+.btn:hover, .btn:focus, .btn:active{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+.form-input
+{
+    width: 151px;
+    height: 40px;
+    background: #FFFFFF;
+    border:#FFFFFF;
+    border-radius: 20px;
+    margin-left:40px;
+}
+.form-label
+{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 140%;
+    /* or 28px */
+    color: #000000;
+    background:#F0EFF5;
+    padding:2px;
+    border-radius:5px;
+}
+.form-label:hover, .form-label:focus, .form-label:active{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+.text-Taophieu
+{
+    position: absolute;
+    width: 269px;
+    height: 60px;
+    border:#FFFFFF;
+    left: 321px;
+    top: 230px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 140%;
+    text-align: center;
+    color: #000000;
+    cursor: pointer;
+}
+
+#cccd
+{
+    position: absolute;
+    left: 352px;
+    top:290px;
+}
+#nbd
+{
+    position: absolute;
+    left: 785px;
+    top:290px;
+}
+.sp
+{
+    margin-top:28px;
+}
+
+.mpt
+{
+    margin-top:28px;
+}
+.sl
+{
+    margin-top:28px;
+}
