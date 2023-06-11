@@ -1,13 +1,13 @@
 import './room.css'
-import Textfield from '@atlaskit/textfield'
+// import Textfield from '@atlaskit/textfield'
 
 const Room = () => {
   return (
     <div id='main'>
       {/* Thanh các tác vụ */}
-      <div className='component'></div>
+      {/* <div className='component'></div>
       <div className='search_bar'></div>
-      <div className='user'></div>
+      <div className='user'></div> */}
 
 
       <div id='sd'>Sơ đồ phòng</div>
@@ -58,10 +58,10 @@ const Room = () => {
           {/* Bảng tìm kiếm */}
           <div id='tc'>Tra cứu phòng</div>
 
-          <Textfield
+          {/* <Textfield
             name="search_for_room"
             placeholder="Nhập mã phòng ..."
-          ></Textfield>
+          ></Textfield> */}
           
           <div id='search_bt'>
             <div id='search_img'></div>

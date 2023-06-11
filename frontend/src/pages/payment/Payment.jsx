@@ -3,7 +3,6 @@ import './payment.css'
 const Payment = () => {
   return (
     <div>
-      Thanh toán
     </div>
   )
 }

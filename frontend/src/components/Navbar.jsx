@@ -1,13 +1,16 @@
-//import {Link, NavLink} from 'react-router-dom'
-
-
-import './navbar.css'
+import React from 'react'
+import {Link} from 'react-router-dom'
+import './Navbar.css'
+import ButtonLogout from './ButtonLogout'
 
 const Navbar = () => {
   return (
-    <nav>
-      <div className="container nav_container">
-        
+    <nav className="navbar">
+      <Link to="/" className='navbar_hotelName'>
+        Group09 Hotel
+      </Link>
+      <div className='btn_logout'>
+        <ButtonLogout/>
       </div>
     </nav>
   )
