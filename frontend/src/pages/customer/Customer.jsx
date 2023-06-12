@@ -1,4 +1,4 @@
-import './customer.css'
+import './customer.css';
 
 const Customer = () => {
   return (
@@ -73,7 +73,25 @@ const Customer = () => {
                 <div class="title_table_customers">
                     Danh sách khách hàng
                 </div>
-                <div className='table_customers_wrapper'>
+                <div className='search_wrapper'>
+                    <div className='search'>
+                        <input type='text' placeholder='Nhập tìm kiếm' id='search_box'/>
+                    </div>
+                    <div className='select_categories'>
+                        <div className='categories_box'>
+                            <input placeholder='CCCD' id='cate_box'/>
+                        </div>
+                        {/* <ul className='categories_options'>
+                            <li>CCCD</li>
+                            <li>Họ tên</li>
+                            <li>SĐT</li>
+                        </ul> */}
+                    </div>
+                    <div className='search_button'>
+                        Tìm kiếm
+                    </div>
+                </div>
+                {/* <div className='table_customers_wrapper'>
                     <table className='table_customers'>
                         <thead>
                             <th width='20%'>CCCD</th>
@@ -113,7 +131,7 @@ const Customer = () => {
                             </tr>
                         </tbody>
                     </table>
-                </div>
+                    </div> */}
             </div>
             <div className='add_customers_area'>
                 <div className='title_add_customers'>
