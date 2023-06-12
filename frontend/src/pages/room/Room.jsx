@@ -32,7 +32,6 @@ function search_click(room_number){
           price_value.innerText = Room_type[j].price;
         }
       }
-      
     }
   }
 }
@@ -76,6 +75,15 @@ export default function Room() {
           if(button_room.id == Rooms[i].num){
             button_room.style.background = full_room_color;
             rooms_status[i]('Đã đặt');
+            // button_room.style.
+          }
+        }
+      }
+      else if(Rooms[i].status == 'Trống'){
+        for(let button_room of room_list){
+          if(button_room.id == Rooms[i].num){
+            button_room.style.background = empty_room_color;
+            rooms_status[i]('Trống');
             // button_room.style.
           }
         }

@@ -8,7 +8,7 @@ const r_101={
 const r_102={
     num: 'r_102',
     type: 'B',
-    status: 'Đã đặt',
+    status: 'Trống',
     day_come: '09/06/2023',
     day_go: '12/06/2023'
 };
@@ -22,7 +22,7 @@ const r_103={
 const r_201={
     num: 'r_201',
     type: 'A',
-    status: 'Đã đặt',
+    status: 'Trống',
     day_come: '11/06/2023',
     day_go: '13/06/2023'
 };
