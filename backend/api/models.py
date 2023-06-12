@@ -87,7 +87,7 @@ class Phong(models.Model):
     )
     
     id_Phong = models.CharField(primary_key=True, max_length=5)
-    id_LP = models.ForeignKey(LoaiPhong,on_delete=models.PROTECT)
+    id_LP = models.ForeignKey(LoaiPhong,on_delete=models.PROTECT, related_name='loaiPhong')
     trangThai = models.IntegerField(choices=TRANGTHAI_CHOICES,default=TRONG, null=False)
 
     def __str__(self):
