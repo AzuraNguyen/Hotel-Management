@@ -127,9 +127,9 @@ export default function Room() {
     
     <div id='main'>
       {/* Thanh các tác vụ */}
-      <div className='component'></div>
+      {/* <div className='component'></div>
       <div className='search_bar'></div>
-      <div className='user'></div>
+      <div className='user'></div> */}
 
       <div id='sd'>Sơ đồ phòng</div>
       {/* Sơ đồ các phòng */}
