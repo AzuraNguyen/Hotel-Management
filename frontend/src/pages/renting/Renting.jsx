@@ -1,26 +1,5 @@
 import './renting.css'
 import { useState } from 'react';
-<<<<<<< HEAD
-
-function handleClickButton() {
-  alert('Hoang ngu')
-}
-
-
-const Renting = () => {
-
-  const [input, setInput] = useState('');
-  return (
-    <>
-      
-      <h1>abc</h1>
-      <button onClick={handleClickButton}>click me</button>
-      <input value={input}
-            onChange={e => setInput(e.target.value)}/>
-      My name is {input}
-    </>
-  )
-=======
 import Modal from "react-modal";
 
 const Renting = () => {
@@ -144,7 +123,6 @@ const Renting = () => {
         </div>
     )
 
->>>>>>> ca7ae6ead07c5d84dfd1acb1b31e27db36db7b4e
 }
 
 export default Renting
