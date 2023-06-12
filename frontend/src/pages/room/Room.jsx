@@ -1,14 +1,22 @@
 import './room.css'
+import React from 'react'
 import Textfield from '@atlaskit/textfield'
 
-const Room = () => {
+export default function Room() {
   return (
+
     <div id='main'>
       {/* Thanh các tác vụ */}
       <div className='component'></div>
       <div className='search_bar'></div>
       <div className='user'></div>
 
+      
+      <Textfield
+        name="search_for_room"
+        placeholder="Nhập mã phòng ..."
+      ></Textfield>
+      
 
       <div id='sd'>Sơ đồ phòng</div>
       {/* Sơ đồ các phòng */}
@@ -30,7 +38,7 @@ const Room = () => {
             <div id='x'></div>
           </div>
           <div class='box_room empty' id='r_202'>
-            <div class='text_box' id='text'>202(B)(Trống)</div>
+            <div class='text_box' id='text'>202(B)(Trống)</div> 
             <div id='ok'></div>
 
           </div>
@@ -57,11 +65,6 @@ const Room = () => {
       <div className='search_room'>
           {/* Bảng tìm kiếm */}
           <div id='tc'>Tra cứu phòng</div>
-
-          <Textfield
-            name="search_for_room"
-            placeholder="Nhập mã phòng ..."
-          ></Textfield>
           
           <div id='search_bt'>
             <div id='search_img'></div>
@@ -95,4 +98,3 @@ const Room = () => {
   )
 }
 
-export default Room

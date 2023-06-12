@@ -1,6 +1,7 @@
 //import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
 
+
 import './App.css';
 import Room from './pages/room/Room';
 import Renting from './pages/renting/Renting';
@@ -11,17 +12,18 @@ import Report from './pages/report/Report';
 import NotFound from './pages/notFound/NotFound';
 import Navbar from './components/Navbar';
 
+import Textfield from "@atlaskit/textfield";
+
 function App() {
   return (
-    <div>
-      <Navbar/>
-      <Room/>
-      <Renting/>
-      <Payment/>
-      <Customer/>
-      <Report/>
-      <NotFound/>
-    </div>
+    <>
+      <h1>abc</h1>
+      <Textfield
+        name="search_for_room"
+        placeholder="Nhập mã phòng ..."
+      ></Textfield>
+    </>
+    
   );
 }
 

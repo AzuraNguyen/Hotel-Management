@@ -1,9 +1,10 @@
 import './renting.css'
 
+
 const Renting = () => {
   return (
     <div>
-      Thuê phòng
+      abc
     </div>
   )
 }
