@@ -12,18 +12,14 @@ import Report from './pages/report/Report';
 import NotFound from './pages/notFound/NotFound';
 import Navbar from './components/Navbar';
 
-import Textfield from "@atlaskit/textfield";
-
 function App() {
+  // if(isLogin){
+  //   page = () => (<Room></Room>)
+  // }
   return (
     <>
-      <h1>abc</h1>
-      <Textfield
-        name="search_for_room"
-        placeholder="Nhập mã phòng ..."
-      ></Textfield>
+      <Room/>
     </>
-    
   );
 }
 
