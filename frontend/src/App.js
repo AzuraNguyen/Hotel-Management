@@ -23,7 +23,7 @@ function App() {
           <Route path='/customer' element={<Customer/>}/>
         </Routes>
       </BrowserRouter> */}
-      <Room/>
+      <Login/>
     </div>
   );
 }
