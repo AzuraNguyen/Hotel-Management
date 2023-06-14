@@ -1,3 +1,6 @@
+body{
+    background: #F0EFF5;
+}
 h1{
     position: absolute;
     width: 362px;
@@ -202,6 +205,10 @@ h1{
     height: 20px;
     left: 1501px;
     top: 550px;
+
+    background-color: #F0EFF5;
+    border-color: #F0EFF5;
+    border-style: none;
     color: purple;
 }
 #miss{
@@ -209,7 +216,7 @@ h1{
     width: 360px;
     height: 21px;
     left: 1246px;
-    top: 736px;
+    top: 663px;
 
     font-family: 'Poppins';
     font-style: normal;
@@ -235,8 +242,8 @@ h1{
 #img_box{
     position: absolute;
     width: 827px;
-    height: 957px;
-    left: 31px;
+    height: 800px;
+    left: 55px;
     top: 34px;
 
     background: #D9D9D9;
@@ -246,9 +253,15 @@ h1{
 #img{
     position: absolute;
     width: 609px;
-    height: 642px;
+    height: 600px;
     left: 100px;
-    top: 183px;
+    top: 100px;
 
-    background: url(ks.png);
+    background: url(./data/login.jpg);
+}
+#sign_up{
+    background-color: #F0EFF5;
+    border-color: #F0EFF5;
+    border-style: none;
+    color: purple;
 }

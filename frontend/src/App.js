@@ -1,7 +1,5 @@
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
-
-import './App.css';
 import Room from './pages/room/Room';
 import Renting from './pages/renting/Renting';
 import Login from './pages/login/Login';
@@ -15,7 +13,7 @@ import Navbar from './components/Navbar';
 function App() {
   return (
     <div className='App'>
-      <BrowserRouter>
+      {/* <BrowserRouter>
         <Sidebar/>
         <Navbar/>
         <Routes>
@@ -24,7 +22,8 @@ function App() {
           <Route path='/report' element={<Report/>}/>
           <Route path='/customer' element={<Customer/>}/>
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
+      <Room/>
     </div>
   );
 }

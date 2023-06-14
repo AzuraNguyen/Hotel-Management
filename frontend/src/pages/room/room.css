@@ -64,16 +64,141 @@ body{
     border-radius: 20px;
 }
 
-.room_inf{
+/* Thông tin phòng */
+#room_inf_box{
+    box-sizing: border-box;
+
     position: absolute;
-    width: 402px;
-    height: 708px;
+    width: 403px;
+    height: 690px;
     left: 1086px;
-    top: 188px;
+    top: 190px;
 
-
-    background: red;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    display: block;
 }
+.infor_header{
+    position: absolute;
+    width: 403px;
+    height: 40px;
+
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 140%;
+    /* or 34px */
+
+    align-items: center;
+    text-align: center;
+
+    color: #000000;
+}
+#header_1{
+    top: 4px;
+}
+#header_2{
+    top: 291px;
+}
+
+/* Thông tin mặc định */
+.inf_box{
+    position: absolute;
+    width: 368px;
+    height: 155px;
+    
+}
+#default{
+    left: 16px;
+    top: 84px;
+}
+#present{
+    left: 16px;
+    top: 349px;
+}
+.line{
+    position: absolute;
+    width: 339px;
+    height: 0px;
+    
+
+    border: 1px solid #000000;
+}
+#line_1{
+    left: 30px;
+    top: 51.5px;
+}
+#line_2{
+    left: 30px;
+    top: 280.5px;
+}
+
+.inf_text{
+    position: absolute;
+    width: 368px;
+    height: 35px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 140%;
+    color: #000000;
+    
+    display: flex;
+    align-items: center;
+}
+#i_type{
+    top: 0px; 
+}
+#i_adult{
+    top: 40px;
+}
+#i_bb{
+    top: 80px;
+}
+#i_price{
+    top: 120px;
+}
+#i_pp{
+    top: 0px; 
+}
+#i_day_come{
+    top: 40px;
+}
+#i_day_go{
+    top: 80px;
+}
+#i_serv{
+    top: 120px;
+}
+#i_status{
+    top: 160;
+}
+#rent_bt{
+    position: absolute;
+    width: 150px;
+    height: 40px;
+    left: 234px;
+    top: 630px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 140%;
+    /* or 28px */
+
+    display: block;
+    align-items: center;
+    text-align: center;
+
+    color: #F00404;
+}
+
 
 /* Tra cứu phòng */
 #tc{
@@ -132,7 +257,7 @@ body{
     margin-left: 4px;
     margin-top: 3px;
 
-    background: url(Search.png);
+    background: url(./data/Search.png);
 }
 #room{
     position: absolute;
@@ -151,21 +276,16 @@ body{
 
     border-radius: 20px;
 }
-.empty{
-    background: #333269;
-}
-.full{
-    background: #D9D9D9;
-}
+
 .text_box{
 
     width: 75px;
     height: 80px;
-    left: 22px;
-    top: 32px;
+    left: 21px;
+    top: 30px;
 
 }
-#text{
+.room_text{
     position: absolute;
     font-family: 'Poppins';
     font-style: normal;
@@ -185,54 +305,57 @@ body{
 #r_101{
     left: 27px;
     top: 32px;
+    background-color: white;
 }
 #r_102{
     left: 240px;
     top: 32px;
+    background-color: white;
 }
 #r_103{
     left: 453px;
     top: 32px;
+    background-color: white;
 }
 #r_201{
     left: 27px;
     top: 184px;
+    background-color: white;
 }
 #r_202{
     left: 240px;
     top: 184px;
+    background-color: white;
 }
 #r_203{
     left: 453px;
     top: 184px;
+    background-color: white;
 }
 #r_301{
     left: 27px;
     top: 338px;
+    background-color: white;
 }
 #r_302{
     left: 240px;
     top: 338px;
+    background-color: white;
 }
 #r_303{
     left: 453px;
     top: 338px;
+    background-color: white;
+    
 }
 
 /* dấu tích */
-#ok{
+#icon{
     position: absolute;
     width: 30px;
     height: 30px;
-
-    background: url(Ok.png);
-}
-#x{
-    position: absolute;
-    width: 30px;
-    height: 30px;
-
-    background: url(Cancel.png);
+    top: 5px;
+    background: url(./data/Ok.png);
 }
 #room_table{
     position: absolute;
@@ -265,17 +388,17 @@ body{
     top: 20px;
     color: #C5697F;
 }
-#lp{
+#type{
     left: 199px;
     top: 20px;
     color: #C5697F;
 }
-#dg{
+#price{
     left: 378px;
     top: 20px;
     color: #C5697F;
 }
-#tt{
+#status{
     left: 557px;
     top: 20px;
     color: #C5697F;
@@ -288,27 +411,23 @@ body{
     top: 57px;
 }
 
-.mp_value{
+.mp_box{
     position: absolute;
-    width: 92px;
     height: 31px;
     left: 28px;
 }
-.lp_value{
+.type_box{
     position: absolute;
-    width: 92px;
     height: 31px;
     left: 221px;
 }
-.dg_value{
+.price_box{
     position: absolute;
-    width: 92px;
     height: 31px;
     left: 369px;
 }
-.tt_value{
+.status_box{
     position: absolute;
-    width: 92px;
     height: 31px;
     left: 557px;
 }
