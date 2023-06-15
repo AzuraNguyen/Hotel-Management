@@ -3,46 +3,68 @@ import React, { useEffect } from 'react'
 import { useState } from 'react';
 import Rooms from './source/rooms.js';
 import Room_type from './source/room_type.js';
-import Textfield from '@atlaskit/textfield'
 
-const mp_value = document.getElementById('mp_value')
-const type_value = document.getElementById('type_value')
-const price_value = document.getElementById('price_value')
-const status_value = document.getElementById('status_value')
 
-const room_list = document.getElementsByTagName('button');
-
-//Màu chia loại phòng theo trạng thái
-const empty_room_color = 'white';
-const full_room_color = 'gray';
-
-//Icon theo trạng thái
-const empty_icon = './data/Ok.png';
-const full_icon = './data/Cancle.png'
-
-function search_click(room_number){
-  for(let i = 0; i < Rooms.length; i++){
-    if(Rooms[i].num.includes(room_number)){
-      mp_value.innerText = room_number;
-      type_value.innerText = Rooms[i].type;
-      status_value.innerText = Rooms[i].status;
-      for(let j = 0; j < Room_type.length; j++)
-      {
-        if(Room_type[j].type == Rooms[i].type){
-          price_value.innerText = Room_type[j].price;
-        }
-      }
-    }
-  }
-}
 
 export default function Room() {
 
+  const mp_value = document.getElementById('mp_value')
+  const type_value = document.getElementById('type_value')
+  const price_value = document.getElementById('price_value')
+  const status_value = document.getElementById('status_value')
+
+  const room_list = document.getElementsByTagName('button');
+
+  //Màu chia loại phòng theo trạng thái
+  const empty_room_color = 'white';
+  const full_room_color = 'gray';
+
+  const Rooms_API = [];
+
+  // useEffect(() => {
+  //   // Gọi API Django 
+  //   fetch('your-api-endpoint', {
+  //     method: 'GET',
+  //     headers: {
+  //       'Content-Type': 'application/json',
+  //     },
+  //     body: JSON.stringify(data),
+  //   })
+  //     .then(response => {
+  //       // Xử lý kết quả trả về từ API
+  //       Rooms_API = response.data;
+  //     })
+  //     .catch(error => {
+  //       // Xử lý lỗi (nếu có)
+  //       console.error(error);
+  //     });
+  // })
+
+  function search_click(room_number){
+    let is_exist = false;
+    for(let i = 0; i < Rooms.length; i++){
+      if(Rooms[i].num == room_number){
+        is_exist = true;
+        mp_value.innerText = room_number;
+        type_value.innerText = Rooms[i].type;
+        status_value.innerText = Rooms[i].status;
+        for(let j = 0; j < Room_type.length; j++)
+        {
+          if(Room_type[j].type == Rooms[i].type){
+            price_value.innerText = Room_type[j].price;
+          }
+        }
+      }
+    }
+    if(!is_exist){
+      alert("Nhập lại mã phòng để kiểm tra");
+    }
+  }
   const room_click = event => {
     let id = event.currentTarget.id;
 
     for(let i = 0; i < Rooms.length; i++){
-      if(Rooms[i].num.includes(id)){
+      if(id.includes(Rooms[i].num)){
         setRoomType(Rooms[i].type);
         setRoomDC(Rooms[i].day_come);
         setRoomDG(Rooms[i].day_go);
@@ -127,9 +149,9 @@ export default function Room() {
     
     <div id='main'>
       {/* Thanh các tác vụ */}
-      <div className='component'></div>
+      {/* <div className='component'></div>
       <div className='search_bar'></div>
-      <div className='user'></div>
+      <div className='user'></div> */}
 
       <div id='sd'>Sơ đồ phòng</div>
       {/* Sơ đồ các phòng */}

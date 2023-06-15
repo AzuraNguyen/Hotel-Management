@@ -9,24 +9,57 @@ function login_click(user, password){
     //Biến kiểm tra tồn tại trong dữ liệu
     var is_exist = false;
 
-    for(let i = 0; i < ListUser.length; i++){
-        if(user == ListUser[i].user && password == ListUser[i].password){
-            is_exist = true;
-        }
-    }
+    // for(let i = 0; i < ListUser.length; i++){
+    //     if(user == ListUser[i].user && password == ListUser[i].password){
+    //         is_exist = true;
+    //     }
+    // }
 
+    // if(is_exist){
+    //     alert("Đăng nhập thành công");
+    //     window.location.href = '/room';
+    //     isLogined = true;
+    // }
+    // else{
+    //     alert("Tài khoản hoặc mật khẩu không đúng");
+    // }
+     // Tạo object chứa thông tin cần gửi tới API Django
+     const data = {
+        user,
+        password
+    };
+    // Gọi API Django 
+    fetch('your-api-endpoint', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+    })
+    .then(response => {
+          // Xử lý kết quả trả về từ API
+          is_exist = response;
+    })
+    .catch(error => {
+          // Xử lý lỗi (nếu có)
+          console.error(error);
+    });
     if(is_exist){
         alert("Đăng nhập thành công");
+        window.location.href = '/room'; // Chuyển trang nếu đăng nhập thành công
         isLogined = true;
     }
     else{
         alert("Tài khoản hoặc mật khẩu không đúng");
     }
-    
 }
 
-function is_clicked(){
-    console.log('click');
+function forget_pw_clicked(){
+    console.log("Xin lỗi hành động này chưa được hỗ trợ");
+}
+
+function signup_clicked(){
+    console.log("Xin lỗi hành động này chưa được hỗ trợ");
 }
 
 
@@ -60,7 +93,7 @@ const Login = () => {
                     />
                     
                     <button id="fg"
-                            onClick={is_clicked}>
+                            onClick={forget_pw_clicked}>
                         Quên mật khẩu?
                     </button>
                     <button id="login_button"
@@ -69,10 +102,10 @@ const Login = () => {
                             Đăng nhập
                         </div>
                     </button>
-                    <div id="miss">
+                    <div id="su">
                         Don't have any account? 
                         <button id="sign_up"
-                                onClick={is_clicked}>
+                                onClick={signup_clicked}>
                             Sign up
                         </button>
                     </div>
