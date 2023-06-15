@@ -1,5 +1,11 @@
 from rest_framework import serializers
-from .models import LoaiPhong, KhachHang
+from .models import LoaiPhong, KhachHang, DangNhap, User
+
+
+class UserSerializers(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = '__all__'
 
 
 class LoaiPhongSerializers(serializers.ModelSerializer):
@@ -14,36 +20,40 @@ class KhachHangSerializers(serializers.ModelSerializer):
         fields = '__all__'
 
 
-# class PhongSerializers(serializers.ModelSerializer):
-#     class Meta:
-#         model = models.Phong
+class LoginSerializers(serializers.Serializer):
+    user = serializers.CharField(max_length=30)
+    password = serializers.CharField(max_length=50)
 
 
-# class PhieuThuePhongSerializers(serializers.ModelSerializer):
-#     class Meta:
-#         model = models.PhieuThuePhong
+class DangNhapSerializers(serializers.ModelSerializer):
+    class Meta:
+        model = DangNhap
+        fields = '__all__'
 
+        # class PhongSerializers(serializers.ModelSerializer):
+        #     class Meta:
+        #         model = models.Phong
 
-# class UserSerializers(serializers.ModelSerializer):
-#     class Meta:
-#         model = models.User
+        # class PhieuThuePhongSerializers(serializers.ModelSerializer):
+        #     class Meta:
+        #         model = models.PhieuThuePhong
 
+        # class UserSerializers(serializers.ModelSerializer):
+        #     class Meta:
+        #         model = models.User
 
-# class DangNhapSerializers(serializers.ModelSerializer):
-#     class Meta:
-#         model = models.DangNhap
+        # class DangNhapSerializers(serializers.ModelSerializer):
+        #     class Meta:
+        #         model = models.DangNhap
 
+        # class HoaDonSerializers(serializers.ModelSerializer):
+        #     class Meta:
+        #         model = models.HoaDon
 
-# class HoaDonSerializers(serializers.ModelSerializer):
-#     class Meta:
-#         model = models.HoaDon
+        # class DichVuSerializers(serializers.ModelSerializer):
+        #     class Meta:
+        #         model = models.DichVu
 
-
-# class DichVuSerializers(serializers.ModelSerializer):
-#     class Meta:
-#         model = models.DichVu
-
-
-# class ChiTietHoaDonSerializers(serializers.ModelSerializer):
-#     class Meta:
-#         model = models.ChiTietHoaDon
+        # class ChiTietHoaDonSerializers(serializers.ModelSerializer):
+        #     class Meta:
+        #         model = models.ChiTietHoaDon
