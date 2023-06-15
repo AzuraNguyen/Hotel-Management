@@ -3,7 +3,7 @@ import React, { useEffect } from 'react'
 import { useState } from 'react';
 import Rooms from './source/rooms.js';
 import Room_type from './source/room_type.js';
-import Textfield from '@atlaskit/textfield'
+// import Textfield from '@atlaskit/textfield'
 
 const mp_value = document.getElementById('mp_value')
 const type_value = document.getElementById('type_value')
@@ -265,10 +265,7 @@ export default function Room() {
               </div>
           </div>
       </div>
-      
-      
     </div>
-    
   )
 }
 

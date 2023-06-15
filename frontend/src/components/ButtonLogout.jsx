@@ -5,10 +5,10 @@ import './ButtonLogout.css'
 
 const ButtonLogout = () => {
   return (
-    <div>
-      <button className='btn'>
+    <div className='logout_wrapper'>
+      <Link to='/login' id='btn_logout'>
         Đăng xuất
-      </button>
+      </Link>
     </div>
   )
 }

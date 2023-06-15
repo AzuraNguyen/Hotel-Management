@@ -89,12 +89,12 @@
   color: white;
 }
 
-.nav_items #icon {
+.nav_items #sidebar_icon {
   flex:30%;
   display:grid;
   place-items: center;
 }
 
-.nav_items #title {
+.nav_items #sidebar_title {
   flex:70%;
 }

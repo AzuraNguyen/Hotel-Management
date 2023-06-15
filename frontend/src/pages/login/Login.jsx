@@ -36,7 +36,7 @@ const Login = () => {
 
 
     return (
-        <div>
+        <div className='login'>
             <div id="box_right">
                 <div className="box_login">
                     <h1>GROUP 9 ACCESS</h1>

@@ -19,6 +19,11 @@ h1{
 
     color: #344054;
 }
+
+.login {
+    margin: 0rem;
+}
+
 #p{
     position: absolute;
     width: 346px;
@@ -34,9 +39,9 @@ h1{
 
     color: #667085;
 }
-.html{
+/* .html{
     margin: 0;
-}
+} */
 .box{
     width: 200px;
     height: 25px;
@@ -133,6 +138,7 @@ h1{
     height: 520px;
     margin: auto;
 }
+
 #text_em{
     box-sizing: border-box;
 

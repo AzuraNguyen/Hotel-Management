@@ -3,71 +3,6 @@ import './customer.css';
 const Customer = () => {
   return (
     <div className="content">
-        {/* <div class="form_nhap">
-            <form action="" class="form_themkhach">
-                <div class="title_themkhach">
-                    <div class="icon_themkhach">
-                    </div>
-                    <div class="text_themkhach">
-                        Thêm khách mới
-                    </div>
-                </div>
-                <div class="container_themkhach">
-                    <div class="left_themkhach">
-                        <div class="nhap_cccd">
-                            <div class="title_cccd">
-                                Nhập CCCD
-                            </div>
-                            <input type="text"/>
-                        </div>
-                        <div class="nhap_hoten">
-                            <div class="title_hoten">
-                                Nhập họ tên
-                            </div>
-                            <input type="text"/>
-                        </div>
-                        <div class="nhap_sodt">
-                            <div class="title_sodt">
-                                Nhập số ĐT
-                            </div>
-                            <input type="text"/>
-                        </div>
-                        <div class="nhap_diachi">
-                            <div class="title_diachi">
-                                Nhập địa chỉ
-                            </div>
-                            <input type="text"/>
-                        </div>
-                    </div>
-                    <div class="right_themkhach">
-                        <div class="nhap_email">
-                            <div class="title_email">
-                                Nhập email
-                            </div>
-                            <input type="text"/>
-                        </div>
-                        <div class="nhap_gioitinh">
-                            <div class="title_gioitinh">
-                                Nhập giới tính
-                            </div>
-                            <input type="text"/>
-                        </div>
-                        <div class="nhap_quoctich">
-                            <div class="title_quoctich">
-                                Nhập quốc tịch
-                            </div>
-                            <input type="text"/>
-                        </div>
-                        <div class="nhap_loaikhach">
-                            <div class="title_loaikhach">
-                                Nhập loại khách
-                            </div>
-                            <input type="text"/>
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </div> */}
         <div className='manage_customers'>
             <div className="list_customers">
                 <div class="title_table_customers">
@@ -77,28 +12,25 @@ const Customer = () => {
                     <div className='search'>
                         <input type='text' placeholder='Nhập tìm kiếm' id='search_box'/>
                     </div>
-                    <div className='select_categories'>
-                        <div className='categories_box'>
-                            <input placeholder='CCCD' id='cate_box'/>
-                        </div>
-                        {/* <ul className='categories_options'>
-                            <li>CCCD</li>
-                            <li>Họ tên</li>
-                            <li>SĐT</li>
-                        </ul> */}
-                    </div>
+                    <select id='filter_customer'>
+                        <option value='' disabled selected hidden>--Bộ lọc--</option>
+                        <option value=''>-</option>
+                        <option value='CCCD'>CCCD</option>
+                        <option value='name'>Họ tên</option>
+                        <option value='SDT'>SDT</option>
+                    </select>
                     <div className='search_button'>
-                        Tìm kiếm
+                        <button id='search_btn'>Tìm kiếm</button>
                     </div>
                 </div>
-                {/* <div className='table_customers_wrapper'>
+                <div className='table_customers_wrapper'>
                     <table className='table_customers'>
                         <thead>
                             <th width='20%'>CCCD</th>
                             <th width='40%'>Họ tên</th>
                             <th width='10%'>Giới tính</th>
                             <th width='10%'>Quốc tịch</th>
-                            <th width='20%'>SĐT</th>
+                            <th width='20%'>SDT</th>
                         </thead>
                         <tbody>
                             <tr>
@@ -131,13 +63,65 @@ const Customer = () => {
                             </tr>
                         </tbody>
                     </table>
-                    </div> */}
+                </div>
             </div>
             <div className='add_customers_area'>
                 <div className='title_add_customers'>
                     Thêm khách hàng
                 </div>
-                <div className='form_add_customers'></div>
+                <form className='form_add_customer'>
+                    <div className='input_group'>
+                        <label id='input_label'>Họ tên*</label>
+                        <input required type='text' id='name' name='HoTen' placeholder='Nguyễn Thị A'/>
+                    </div>
+                    <div className='row'>
+                        <div className='input_group'>
+                            <label id='input_label'>CCCD*</label>
+                            <input required placeholder='123456789012'/>
+                        </div>
+                        <div className='input_group'>
+                            <label id='input_label'>Giới tính*</label>
+                            <select id='gender' required>
+                                <option value='' disabled selected hidden>--Chọn--</option>
+                                <option value='0'>Nam</option>
+                                <option value='1'>Nữ</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div className='row'>
+                        <div className='input_group'>
+                            <label id='input_label'>Quốc tịch*</label>
+                            <select id='nationality' required>
+                                <option value='' disabled selected hidden>--Chọn-- </option>
+                                <option value='VNG'>Việt Nam</option>
+                                <option value='CHN'>Trung Quốc</option>
+                            </select>
+                        </div>
+                        <div className='input_group'>
+                            <label id='input_label'>Loại khách*</label>
+                            <select id='customer_type' required>
+                                <option value='' disabled selected hidden>--Chọn-- </option>
+                                <option value='NoiDia'>Nội địa</option>
+                                <option value='NuocNgoai'>Nước ngoài</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div className='input_group'>
+                        <label id='input_label'>SĐT</label>
+                        <input placeholder=''/>
+                    </div>
+                    <div className='input_group'>
+                        <label id='input_label'>Email</label>
+                        <input placeholder='abc@gmail.com'/>
+                    </div>
+                    <div className='input_group'>
+                        <label id='input_label'>Địa chỉ</label>
+                        <input name='DiaChi' placeholder=''/>
+                    </div>
+                    <button className='btn_add_customer'>
+                        Thêm
+                    </button>
+                </form>
             </div>
         </div>
     </div>

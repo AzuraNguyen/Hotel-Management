@@ -24,8 +24,8 @@ function Sidebar() {
           return (
             <li key={key} className="nav_items">
               <NavLink to={val.link} className = {({isActive}) => "nav_links" + (isActive ? "_activated": "")}>
-                <div id="icon">{val.icon}</div>
-                <div id="title">{val.title}</div>
+                <div id="sidebar_icon">{val.icon}</div>
+                <div id="sidebar_title">{val.title}</div>
               </NavLink>
             </li>
           );
