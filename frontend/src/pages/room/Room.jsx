@@ -3,41 +3,40 @@ import React, { useEffect } from 'react'
 import { useState } from 'react';
 import Rooms from './source/rooms.js';
 import Room_type from './source/room_type.js';
-// import Textfield from '@atlaskit/textfield'
 
-const mp_value = document.getElementById('mp_value')
-const type_value = document.getElementById('type_value')
-const price_value = document.getElementById('price_value')
-const status_value = document.getElementById('status_value')
 
-const room_list = document.getElementsByTagName('button');
-
-//Màu chia loại phòng theo trạng thái
-const empty_room_color = 'white';
-const full_room_color = 'gray';
-
-//Icon theo trạng thái
-const empty_icon = './data/Ok.png';
-const full_icon = './data/Cancle.png'
-
-function search_click(room_number){
-  for(let i = 0; i < Rooms.length; i++){
-    if(Rooms[i].num.includes(room_number)){
-      mp_value.innerText = room_number;
-      type_value.innerText = Rooms[i].type;
-      status_value.innerText = Rooms[i].status;
-      for(let j = 0; j < Room_type.length; j++)
-      {
-        if(Room_type[j].type == Rooms[i].type){
-          price_value.innerText = Room_type[j].price;
+export default function Room() {
+  const num_value = document.getElementById('num_value')
+  const type_value = document.getElementById('type_value');
+  const price_value = document.getElementById('price_value');
+  const status_value = document.getElementById('status_value');
+  
+  const room_list = document.getElementsByTagName('button');
+  
+  //Màu chia loại phòng theo trạng thái
+  const empty_room_color = 'white';
+  const full_room_color = 'gray';
+  
+  //Icon theo trạng thái
+  const empty_icon = './data/Ok.png';
+  const full_icon = './data/Cancle.png'
+  
+  function search_click(room_number){
+    for(let i = 0; i < Rooms.length; i++){
+      if(Rooms[i].num.includes(room_number)){
+        num_value.innerText = room_number;
+        type_value.innerText = Rooms[i].type;
+        status_value.innerText = Rooms[i].status;
+        for(let j = 0; j < Room_type.length; j++)
+        {
+          if(Room_type[j].type == Rooms[i].type){
+            price_value.innerText = Room_type[j].price;
+          }
         }
       }
     }
   }
-}
-
-export default function Room() {
-
+  
   const room_click = event => {
     let id = event.currentTarget.id;
 
@@ -251,7 +250,7 @@ export default function Room() {
               {/* Dòng 1 */}
               <div class='room_box'>
                 <div class='mp_box room_text'>
-                  <div id='mp_value'>101</div>
+                  <div id='num_value'>101</div>
                 </div>
                 <div class='type_box room_text'>
                   <div id='type_value'>A</div>

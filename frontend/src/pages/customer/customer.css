@@ -18,243 +18,6 @@ html{
     /* background-color: purple; */
 }
 
-/* 
-.text{
-    background-color: seagreen;
-    width: 100%;
-    height: 30%;
-} */
-
-/* 
-.form_nhap{
-    margin-left:0%;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: transparent;
-}
-
-.form_themkhach{
-    width: 100%;
-    height:100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.title_themkhach{
-    margin-top:10%;
-    width: 95%;
-    height: 10%;
-    display: flex;
-} */
-
-/* 
-.icon_themkhach{
-    width: 5%;
-    height: 100%;
-
-    display: flex;
-    align-items: center;
-}
-.icon_themkhach i{
-    font-size: 2rem;
-    color: black;
-}
-.text_themkhach{
-    width: auto;
-    height: 100%;
-    color: black;
-    font-size: 1.7rem;
-    font-weight: 600;
-    outline: 1.75rem;
-}
-.container_themkhach{
-    width: 95%;
-    height: 90%;
-    display: flex;
-    align-items: center;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-}
-.left_themkhach{
-    width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    padding-left: 2rem;
-    padding-right: 2rem;
-}
-.nhap_cccd{
-    width: 100%;
-    height: 25%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-.title_cccd{
-    width: 50%;
-    height: 30%;
-    font-size: 1.5rem;
-}
-.nhap_cccd input{
-    width: 100%;
-    height: 40%;
-    border: none;
-    outline: none;
-    border-radius: 1rem;
-}
-.nhap_hoten{
-    width: 100%;
-    height: 25%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-.title_hoten{
-    width: 50%;
-    height: 30%;
-    font-size: 1.5rem;
-}
-.nhap_hoten input{
-    width: 100%;
-    height: 40%;
-    border: none;
-    outline: none;
-    border-radius: 1rem;
-}
-.nhap_sodt{
-    width: 100%;
-    height: 25%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-.title_sodt{
-    width: 50%;
-    height: 30%;
-    font-size: 1.5rem;
-}
-.nhap_sodt input{
-    width: 100%;
-    height: 40%;
-    border: none;
-    outline: none;
-    border-radius: 1rem;
-}
-.nhap_diachi{
-    width: 100%;
-    height: 25%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-.title_diachi{
-    width: 50%;
-    height: 30%;
-    font-size: 1.5rem;
-}
-.nhap_diachi input{
-    width: 100%;
-    height: 40%;
-    border: none;
-    outline: none;
-    border-radius: 1rem;
-}
-.right_themkhach{
-    width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    padding-left: 2rem;
-    padding-right: 2rem;
-}
-.nhap_email{
-    width: 100%;
-    height: 25%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-.title_email{
-    width: 50%;
-    height: 30%;
-    font-size: 1.5rem;
-}
-.nhap_email input{
-    width: 100%;
-    height: 40%;
-    border: none;
-    outline: none;
-    border-radius: 1rem;
-}.nhap_gioitinh{
-    width: 100%;
-    height: 25%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-.title_gioitinh{
-    width: 50%;
-    height: 30%;
-    font-size: 1.5rem;
-}
-.nhap_gioitinh input{
-    width: 100%;
-    height: 40%;
-    border: none;
-    outline: none;
-    border-radius: 1rem;
-}.nhap_quoctich{
-    width: 100%;
-    height: 25%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-.title_quoctich{
-    width: 50%;
-    height: 30%;
-    font-size: 1.5rem;
-}
-.nhap_quoctich input{
-    width: 100%;
-    height: 40%;
-    border: none;
-    outline: none;
-    border-radius: 1rem;
-}.nhap_loaikhach{
-    width: 100%;
-    height: 25%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-.title_loaikhach{
-    width: 50%;
-    height: 30%;
-    font-size: 1.5rem;
-}
-.nhap_loaikhach input{
-    width: 100%;
-    height: 40%;
-    border: none;
-    outline: none;
-    border-radius: 1rem;
-} */
-
-
 .manage_customers {
     margin-left:0%;
     width:100%;
@@ -323,16 +86,20 @@ html{
     box-shadow: 0px 5px 5px #ccc;
     border-radius: 5px;
     white-space: nowrap;
-    overflow-x: auto;
+    overflow-x: hidden;
+    overflow-y: scroll;
     font-size: 1.5rem;
     width: 100%;
+    height: 520px;
 }
 
 /* width: 100%; */
 
-.table_customers thead {
+.table_customers thead th{
     background-color: #ccc;
     color: #222;
+    position: sticky;
+    top: 0;
 }
 
 .table_customers th,
@@ -340,13 +107,14 @@ html{
     text-align: center;
     padding: 1rem;
     vertical-align: middle;
-    /* border: 1px solid black; */
+    border: 1px solid #797878;
 }
 
 .table_customers td {
-    border-top: 0.5px solid #ddd;
+    /* border-top: 0.5px solid #ddd; */
     overflow: hidden;
     text-overflow: ellipsis;
+    border: 1px solid #797878;
 }
 
 .table_customers tr:hover {
@@ -436,6 +204,7 @@ form.form_add_customer .row{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 1rem;
 }
 
 .input_group {

@@ -10,22 +10,21 @@ import NotFound from './pages/notFound/NotFound';
 import Sidebar from './components/Sidebar';
 import Navbar from './components/Navbar';
 
+
 function App() {
   return (
     <div className='App'>
       <BrowserRouter>
-        <Sidebar/>
+        <Sidebar /> 
         <Navbar/>
         <Routes>
-          <Route path='/' element={<Payment/>}/>
+          <Route path='/login' element={<Login/>}/>
           <Route path='/renting' element={<Renting/>}/>
-          <Route path='/room' element={<Room/>}/>
+          <Route path='/room' index element={<Room/>}/>
           <Route path='/report' element={<Report/>}/>
           <Route path='/customer' element={<Customer/>}/>
-          <Route path='/login' element={<Login/>}/>
         </Routes>
       </BrowserRouter>
-      {/* <Room/> */}
     </div>
   );
 }

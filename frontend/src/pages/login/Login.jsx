@@ -17,12 +17,12 @@ function login_click(user, password){
 
     if(is_exist){
         alert("Đăng nhập thành công");
+        window.location.href = '/room';
         isLogined = true;
     }
     else{
         alert("Tài khoản hoặc mật khẩu không đúng");
     }
-    
 }
 
 function is_clicked(){
@@ -33,7 +33,6 @@ function is_clicked(){
 const Login = () => {
     const [user, setUser] = useState('  Nhập tài khoản');
     const [password, setPassWord] = useState('  Nhập mật khẩu');
-
 
     return (
         <div className='login'>
