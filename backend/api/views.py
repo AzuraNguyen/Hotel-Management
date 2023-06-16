@@ -61,10 +61,26 @@ class LoaiPhongViewset(viewsets.ModelViewSet):
 
 
 class KhachHangViewset(viewsets.ModelViewSet):
-    queryset = KhachHang.objects.all()
     serializer_class = KhachHangSerializers
-    http_method_names = ['get',]
-        
+    queryset = KhachHang.objects.all()
+
+    # def get_queryset(self):
+    #     queryset = KhachHang.objects.all()
+    #     KH_set = []
+    #     for kh in queryset:
+    #         KH_set.append({
+    #             'cccd': kh.cccd, 
+    #             '': phong.id_LP.ten, 
+    #             'status': trangThai,
+    #             'price': phong.id_LP.donGia,
+    #             'pp': phong.id_LP.slNguoi,
+    #             'day_come': '',
+    #             'day_go': '',
+    #             'renter': 0,
+    #         })
+    #     return sd_Phong
+
     def list(self, request):
+        # queryset = self.get_query()
         serializer = self.serializer_class(self.queryset, many=True)
         return Response(serializer.data,status=status.HTTP_200_OK)

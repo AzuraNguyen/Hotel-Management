@@ -40,7 +40,6 @@ class SoDoPhongSerializers(serializers.Serializer):
 
 
 class KhachHangSerializers(serializers.ModelSerializer):
-
     class Meta:
         model = KhachHang
         fields = '__all__'
