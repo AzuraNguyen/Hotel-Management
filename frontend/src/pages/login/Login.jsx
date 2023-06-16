@@ -1,37 +1,43 @@
 import './login.css'
 import { useEffect, useState } from 'react';
-// import ListUser from './data/resource';
 
 const Login = () => {
     const [user, setUser] = useState('  Nhập tài khoản');
     const [password, setPassWord] = useState('  Nhập mật khẩu');
     const [ListUser, setListUser] = useState('');
     const [data, setData] = useState('');
+
+    
     useEffect(() => {
-        // Gọi API Django để lấy dữ liệu
-        fetch('http://127.0.0.1:8000/api/login/', {
-            method: 'GET',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-        })
-        .then(response => {
-              if(response.ok){
-                return response.json();
-              }
-              throw response;
-        })
-        .then(data => {
-            setData(data);
-            setListUser(data);
-        })
-        .catch(error => {
-              // Xử lý lỗi (nếu có)
-              console.error(error);
-        });
+        const interval = setInterval(() => {
+            // Gọi API Django để lấy dữ liệu
+            fetch('http://127.0.0.1:8000/api/login/', {
+                method: 'GET',
+                headers: {
+                'Content-Type': 'application/json',
+                },
+            })
+            .then(response => {
+                if(response.ok){
+                    return response.json();
+                }
+                throw response;
+            })
+            .then(data => {
+                setData(data);
+                setListUser(data);
+            })
+            .catch(error => {
+                // Xử lý lỗi (nếu có)
+                console.error(error);
+            });
+        }, 5000);   
+        return () => clearInterval(interval);
+        
     }, [])
     
     function login_click(user, password){
+        
         //Biến kiểm tra tồn tại trong dữ liệu
         var is_exist = false;
         
@@ -110,5 +116,6 @@ const Login = () => {
         </div>
     )
 }
+
 
 export default Login

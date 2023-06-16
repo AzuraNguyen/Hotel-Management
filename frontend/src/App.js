@@ -10,7 +10,20 @@ import NotFound from './pages/notFound/NotFound';
 import Sidebar from './components/Sidebar';
 import Navbar from './components/Navbar';
 
+import { useEffect } from 'react';
+
+
+
 function App() {
+  // useEffect(() => {
+  //   if(!is_logined){
+  //     var interval = setInterval(() => {
+  //       console.log(is_logined);
+  //     }, 3000);
+  //   }
+  
+  //   return () => clearInterval(interval);
+  // }, [])
   return (
     <div className='App'>
       {/* <BrowserRouter> */}
@@ -23,7 +36,6 @@ function App() {
           <Route path='/customer' element={<Customer/>}/>
         </Routes>
       </BrowserRouter> */}
-      
       <Login/>
     </div>
   );
