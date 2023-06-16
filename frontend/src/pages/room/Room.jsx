@@ -5,26 +5,53 @@ import Rooms from './source/rooms.js';
 import Room_type from './source/room_type.js';
 
 
+
 export default function Room() {
-  const num_value = document.getElementById('num_value')
-  const type_value = document.getElementById('type_value');
-  const price_value = document.getElementById('price_value');
-  const status_value = document.getElementById('status_value');
-  
+
+  const mp_value = document.getElementById('mp_value')
+  const type_value = document.getElementById('type_value')
+  const price_value = document.getElementById('price_value')
+  const status_value = document.getElementById('status_value')
+
   const room_list = document.getElementsByTagName('button');
-  
+
   //Màu chia loại phòng theo trạng thái
   const empty_room_color = 'white';
   const full_room_color = 'gray';
   
-  //Icon theo trạng thái
-  const empty_icon = './data/Ok.png';
-  const full_icon = './data/Cancle.png'
-  
+  // const [data, setData] = useState('');
+  // const [Rooms, setRooms] = useState('');
+
+//   useEffect(() => {
+//     // Gọi API Django để lấy dữ liệu
+//     fetch('http://127.0.0.1:8000/api/login/', {
+//         method: 'GET',
+//         headers: {
+//           'Content-Type': 'application/json',
+//         },
+//     })
+//     .then(response => {
+//           if(response.ok){
+//             return response.json();
+//           }
+//           throw response;
+//     })
+//     .then(data => {
+//         setData(data);
+//         setRooms(data);
+//     })
+//     .catch(error => {
+//           // Xử lý lỗi (nếu có)
+//           console.error(error);
+//     });
+// }, [])
+
   function search_click(room_number){
+    let is_exist = false;
     for(let i = 0; i < Rooms.length; i++){
-      if(Rooms[i].num.includes(room_number)){
-        num_value.innerText = room_number;
+      if(Rooms[i].num == room_number){
+        is_exist = true;
+        mp_value.innerText = room_number;
         type_value.innerText = Rooms[i].type;
         status_value.innerText = Rooms[i].status;
         for(let j = 0; j < Room_type.length; j++)
@@ -35,13 +62,15 @@ export default function Room() {
         }
       }
     }
+    if(!is_exist){
+      alert("Nhập lại mã phòng để kiểm tra");
+    }
   }
-  
   const room_click = event => {
     let id = event.currentTarget.id;
 
     for(let i = 0; i < Rooms.length; i++){
-      if(Rooms[i].num.includes(id)){
+      if(id.includes(Rooms[i].num)){
         setRoomType(Rooms[i].type);
         setRoomDC(Rooms[i].day_come);
         setRoomDG(Rooms[i].day_go);
@@ -71,10 +100,9 @@ export default function Room() {
     for(let i = 0; i < Rooms.length; i++){
       if(Rooms[i].status == 'Đã đặt'){
         for(let button_room of room_list){
-          if(button_room.id == Rooms[i].num){
+          if(button_room.id.includes(Rooms[i].num)){
             button_room.style.background = full_room_color;
             rooms_status[i]('Đã đặt');
-            // button_room.style.
           }
         }
       }
@@ -83,12 +111,13 @@ export default function Room() {
           if(button_room.id == Rooms[i].num){
             button_room.style.background = empty_room_color;
             rooms_status[i]('Trống');
-            // button_room.style.
           }
         }
       }
     }
   })
+
+  console.log(Rooms);
 
   //Mã phòng của các phòng
   const rooms_num = ['101', '102', '103', '201', '202', '203', '301', '302', '303']
@@ -122,6 +151,7 @@ export default function Room() {
 
   //Biến kiểm tra các phòng được nhấp vào hay chưa
   const [box_room_isClicked, setBRC] = useState('false');
+
   return (
     
     <div id='main'>
