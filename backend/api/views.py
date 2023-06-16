@@ -1,8 +1,16 @@
 from rest_framework import status, viewsets
 from rest_framework.response import Response
 from rest_framework.request import Request
-from .serializers import LoaiPhongSerializers, KhachHangSerializers, LoginSerializers, DangNhapSerializers, UserSerializers
-from .models import KhachHang, LoaiPhong, DangNhap, User
+from .serializers import LoaiPhongSerializers, KhachHangSerializers, LoginSerializers, DangNhapSerializers, UserSerializers, PhongSerializers
+from .models import KhachHang, LoaiPhong, DangNhap, User,Phong
+
+
+
+
+
+class PhongViewset(viewsets.ModelViewSet):
+    serializer_class = PhongSerializers
+    queryset = Phong.objects.all()
 
 
 class UserViewset(viewsets.ModelViewSet):

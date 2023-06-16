@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import LoaiPhong, KhachHang, DangNhap, User
+from .models import LoaiPhong, KhachHang, DangNhap, User, Phong
 
 
 class UserSerializers(serializers.ModelSerializer):

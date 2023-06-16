@@ -49,15 +49,15 @@ function Customer() {
     )));
 
     
-    function filter_customer_table() {
-        const inputStr = searchInput;
-        document.querySelectorAll(".table_cusomters tr:not(.header)").forEach((tr)=> {
-            const anyMatch = [...tr.children]
-            .some(td => td.textContent.includes(inputStr));
-            if (anyMatch) tr.style.removeProperty('display');
-            else tr.style.display = 'none';
-        })
-    };
+    // function filter_customer_table() {
+    //     const inputStr = searchInput;
+    //     document.querySelectorAll(".table_cusomters tr:not(.header)").forEach((tr)=> {
+    //         const anyMatch = [...tr.children]
+    //         .some(td => td.textContent.includes(inputStr));
+    //         if (anyMatch) tr.style.removeProperty('display');
+    //         else tr.style.display = 'none';
+    //     })
+    // };
     
 
     if (error) {
