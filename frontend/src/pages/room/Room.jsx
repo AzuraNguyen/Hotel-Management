@@ -18,27 +18,33 @@ export default function Room() {
   //Màu chia loại phòng theo trạng thái
   const empty_room_color = 'white';
   const full_room_color = 'gray';
+  
+  // const [data, setData] = useState('');
+  // const [Rooms, setRooms] = useState('');
 
-  const Rooms_API = [];
-
-  // useEffect(() => {
-  //   // Gọi API Django 
-  //   fetch('your-api-endpoint', {
-  //     method: 'GET',
-  //     headers: {
-  //       'Content-Type': 'application/json',
-  //     },
-  //     body: JSON.stringify(data),
-  //   })
-  //     .then(response => {
-  //       // Xử lý kết quả trả về từ API
-  //       Rooms_API = response.data;
-  //     })
-  //     .catch(error => {
-  //       // Xử lý lỗi (nếu có)
-  //       console.error(error);
-  //     });
-  // })
+//   useEffect(() => {
+//     // Gọi API Django để lấy dữ liệu
+//     fetch('http://127.0.0.1:8000/api/login/', {
+//         method: 'GET',
+//         headers: {
+//           'Content-Type': 'application/json',
+//         },
+//     })
+//     .then(response => {
+//           if(response.ok){
+//             return response.json();
+//           }
+//           throw response;
+//     })
+//     .then(data => {
+//         setData(data);
+//         setRooms(data);
+//     })
+//     .catch(error => {
+//           // Xử lý lỗi (nếu có)
+//           console.error(error);
+//     });
+// }, [])
 
   function search_click(room_number){
     let is_exist = false;
@@ -94,10 +100,9 @@ export default function Room() {
     for(let i = 0; i < Rooms.length; i++){
       if(Rooms[i].status == 'Đã đặt'){
         for(let button_room of room_list){
-          if(button_room.id == Rooms[i].num){
+          if(button_room.id.includes(Rooms[i].num)){
             button_room.style.background = full_room_color;
             rooms_status[i]('Đã đặt');
-            // button_room.style.
           }
         }
       }
@@ -106,12 +111,13 @@ export default function Room() {
           if(button_room.id == Rooms[i].num){
             button_room.style.background = empty_room_color;
             rooms_status[i]('Trống');
-            // button_room.style.
           }
         }
       }
     }
   })
+
+  console.log(Rooms);
 
   //Mã phòng của các phòng
   const rooms_num = ['101', '102', '103', '201', '202', '203', '301', '302', '303']
@@ -145,6 +151,7 @@ export default function Room() {
 
   //Biến kiểm tra các phòng được nhấp vào hay chưa
   const [box_room_isClicked, setBRC] = useState('false');
+
   return (
     
     <div id='main'>

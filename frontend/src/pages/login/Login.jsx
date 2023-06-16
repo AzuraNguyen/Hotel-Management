@@ -1,72 +1,62 @@
 import './login.css'
-import { useState } from 'react';
-import ListUser from './data/resource';
-
-let isLogined = false;
-
-function login_click(user, password){
-
-    //Biến kiểm tra tồn tại trong dữ liệu
-    var is_exist = false;
-
-    // for(let i = 0; i < ListUser.length; i++){
-    //     if(user == ListUser[i].user && password == ListUser[i].password){
-    //         is_exist = true;
-    //     }
-    // }
-
-    // if(is_exist){
-    //     alert("Đăng nhập thành công");
-    //     window.location.href = '/room';
-    //     isLogined = true;
-    // }
-    // else{
-    //     alert("Tài khoản hoặc mật khẩu không đúng");
-    // }
-     // Tạo object chứa thông tin cần gửi tới API Django
-     const data = {
-        user,
-        password
-    };
-    // Gọi API Django 
-    fetch('your-api-endpoint', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-    })
-    .then(response => {
-          // Xử lý kết quả trả về từ API
-          is_exist = response;
-    })
-    .catch(error => {
-          // Xử lý lỗi (nếu có)
-          console.error(error);
-    });
-    if(is_exist){
-        alert("Đăng nhập thành công");
-        window.location.href = '/room'; // Chuyển trang nếu đăng nhập thành công
-        isLogined = true;
-    }
-    else{
-        alert("Tài khoản hoặc mật khẩu không đúng");
-    }
-}
-
-function forget_pw_clicked(){
-    console.log("Xin lỗi hành động này chưa được hỗ trợ");
-}
-
-function signup_clicked(){
-    console.log("Xin lỗi hành động này chưa được hỗ trợ");
-}
-
+import { useEffect, useState } from 'react';
+// import ListUser from './data/resource';
 
 const Login = () => {
     const [user, setUser] = useState('  Nhập tài khoản');
     const [password, setPassWord] = useState('  Nhập mật khẩu');
-
+    const [ListUser, setListUser] = useState('');
+    const [data, setData] = useState('');
+    useEffect(() => {
+        // Gọi API Django để lấy dữ liệu
+        fetch('http://127.0.0.1:8000/api/login/', {
+            method: 'GET',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+        })
+        .then(response => {
+              if(response.ok){
+                return response.json();
+              }
+              throw response;
+        })
+        .then(data => {
+            setData(data);
+            setListUser(data);
+        })
+        .catch(error => {
+              // Xử lý lỗi (nếu có)
+              console.error(error);
+        });
+    }, [])
+    
+    function login_click(user, password){
+        //Biến kiểm tra tồn tại trong dữ liệu
+        var is_exist = false;
+        
+        
+        for(let i = 0; i < ListUser.length; i++){
+            if(user == ListUser[i].user && password == ListUser[i].password){
+                is_exist = true;
+            }
+        }
+        if(is_exist){
+            alert("Đăng nhập thành công");
+            window.location.href = '/room'; // Chuyển trang nếu đăng nhập thành công
+        }
+        else{
+            alert("Tài khoản hoặc mật khẩu không đúng");
+        }
+    }
+    
+    function forget_pw_clicked(){
+        console.log("Xin lỗi hành động này chưa được hỗ trợ");
+    }
+    
+    function signup_clicked(){
+        console.log("Xin lỗi hành động này chưa được hỗ trợ");
+    }
 
     return (
         <div>
@@ -122,4 +112,3 @@ const Login = () => {
 }
 
 export default Login
-export {isLogined}
