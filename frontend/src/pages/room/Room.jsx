@@ -117,8 +117,6 @@ export default function Room() {
     }
   })
 
-  console.log(Rooms);
-
   //Mã phòng của các phòng
   const rooms_num = ['101', '102', '103', '201', '202', '203', '301', '302', '303']
 
@@ -155,10 +153,6 @@ export default function Room() {
   return (
     
     <div id='main'>
-      {/* Thanh các tác vụ */}
-      {/* <div className='component'></div>
-      <div className='search_bar'></div>
-      <div className='user'></div> */}
 
       <div id='sd'>Sơ đồ phòng</div>
       {/* Sơ đồ các phòng */}
